@@ -14,6 +14,7 @@
 		33ADA585262D6CF000529A72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33ADA584262D6CF000529A72 /* Assets.xcassets */; };
 		33ADA588262D6CF000529A72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33ADA586262D6CF000529A72 /* LaunchScreen.storyboard */; };
 		33ADA593262D6CF000529A72 /* BerlinClockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ADA592262D6CF000529A72 /* BerlinClockTests.swift */; };
+		33ADA5B6262D789500529A72 /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ADA5B5262D789500529A72 /* Clock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		33ADA58E262D6CF000529A72 /* BerlinClockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BerlinClockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		33ADA592262D6CF000529A72 /* BerlinClockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlinClockTests.swift; sourceTree = "<group>"; };
 		33ADA594262D6CF000529A72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33ADA5B5262D789500529A72 /* Clock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,8 @@
 		33ADA57A262D6CEE00529A72 /* BerlinClock */ = {
 			isa = PBXGroup;
 			children = (
+				33ADA5B4262D786D00529A72 /* ViewControllers */,
+				33ADA5B3262D786500529A72 /* Models */,
 				33ADA57B262D6CEE00529A72 /* AppDelegate.swift */,
 				33ADA57D262D6CEE00529A72 /* SceneDelegate.swift */,
 				33ADA57F262D6CEE00529A72 /* ViewController.swift */,
@@ -97,6 +101,21 @@
 				33ADA594262D6CF000529A72 /* Info.plist */,
 			);
 			path = BerlinClockTests;
+			sourceTree = "<group>";
+		};
+		33ADA5B3262D786500529A72 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				33ADA5B5262D789500529A72 /* Clock.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		33ADA5B4262D786D00529A72 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +220,7 @@
 			files = (
 				33ADA580262D6CEE00529A72 /* ViewController.swift in Sources */,
 				33ADA57C262D6CEE00529A72 /* AppDelegate.swift in Sources */,
+				33ADA5B6262D789500529A72 /* Clock.swift in Sources */,
 				33ADA57E262D6CEE00529A72 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
