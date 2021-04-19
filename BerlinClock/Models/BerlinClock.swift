@@ -36,7 +36,7 @@ class BerlinClock: Clock {
     }
     
     /// Gets String representation from single hour indecator row.
-    func getOneHourIndecatorRow(date: Date) -> String {
+    func getSingleHourIndecatorRow(date: Date) -> String {
         let hours = Int(getCurrentHour(date: date)) ?? 0
         let numberOfActiveLamps = hours % 5
         var indecatorRow: String = ""
@@ -62,6 +62,17 @@ class BerlinClock: Clock {
                 indecatorRow.append(BerlinClockLamp.O.rawValue)
             }
             
+        }
+        return indecatorRow
+    }
+    
+    /// Gets String representation from single minute indecator row.
+    func getSingleMinuteIndecatorRow(date: Date) -> String {
+        let minutes = Int(getCurrentMinute(date: date)) ?? 0
+        let numberOfActiveLamps = minutes % 5
+        var indecatorRow: String = ""
+        for i in 1...4 {
+            indecatorRow.append(i <= numberOfActiveLamps ? BerlinClockLamp.Y.rawValue : BerlinClockLamp.O.rawValue)
         }
         return indecatorRow
     }

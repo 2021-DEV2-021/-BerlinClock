@@ -30,6 +30,16 @@ class BerlinClockTests: XCTestCase {
         let date2 = getDateFromTime(timeString: "23:59:59")
         let rowData2 = berlinClock.getSecondIndecatorRow(date: date2)
         XCTAssertEqual(rowData2, "O")
+        
+        // Case 3: Test if "23:59:53" equals to O
+        let date3 = getDateFromTime(timeString: "23:59:53")
+        let rowData3 = berlinClock.getSecondIndecatorRow(date: date3)
+        XCTAssertEqual(rowData3, "O")
+        
+        // Case 4: Test if "23:59:54" equals to Y
+        let date4 = getDateFromTime(timeString: "23:59:54")
+        let rowData4 = berlinClock.getSecondIndecatorRow(date: date4)
+        XCTAssertEqual(rowData4, "Y")
     }
     
     
@@ -61,30 +71,30 @@ class BerlinClockTests: XCTestCase {
     }
     
     
-    func testOneHoursRow() {
+    func testSingleHoursRow() {
         // Case 1: Test if "00:00:00" equals to OOOO
         let date1 = getDateFromTime(timeString: "00:00:00")
-        let rowData1 = berlinClock.getOneHourIndecatorRow(date: date1)
+        let rowData1 = berlinClock.getSingleHourIndecatorRow(date: date1)
         XCTAssertEqual(rowData1, "OOOO")
         
         // Case 2: Test if "23:59:59" equals to RRRO
         let date2 = getDateFromTime(timeString: "23:59:59")
-        let rowData2 = berlinClock.getOneHourIndecatorRow(date: date2)
+        let rowData2 = berlinClock.getSingleHourIndecatorRow(date: date2)
         XCTAssertEqual(rowData2, "RRRO")
         
         // Case 3: Test if "02:04:00" equals to RROO
         let date3 = getDateFromTime(timeString: "02:04:00")
-        let rowData3 = berlinClock.getOneHourIndecatorRow(date: date3)
+        let rowData3 = berlinClock.getSingleHourIndecatorRow(date: date3)
         XCTAssertEqual(rowData3, "RROO")
         
         // Case 4: Test if "08:23:00" equals to RRRO
         let date4 = getDateFromTime(timeString: "08:23:00")
-        let rowData4 = berlinClock.getOneHourIndecatorRow(date: date4)
+        let rowData4 = berlinClock.getSingleHourIndecatorRow(date: date4)
         XCTAssertEqual(rowData4, "RRRO")
         
         // Case 5: Test if "16:35:00" equals to RRRR
         let date5 = getDateFromTime(timeString: "14:35:00")
-        let rowData5 = berlinClock.getOneHourIndecatorRow(date: date5)
+        let rowData5 = berlinClock.getSingleHourIndecatorRow(date: date5)
         XCTAssertEqual(rowData5, "RRRR")
     }
     
@@ -115,6 +125,31 @@ class BerlinClockTests: XCTestCase {
         XCTAssertEqual(rowData5, "YYRYYRYOOOO")
     }
     
-    
+    func testSingleMinuteRow() {
+        // Case 1: Test if "00:00:00" equals to OOOO
+        let date1 = getDateFromTime(timeString: "00:00:00")
+        let rowData1 = berlinClock.getSingleMinuteIndecatorRow(date: date1)
+        XCTAssertEqual(rowData1, "OOOO")
+        
+        // Case 2: Test if "23:59:59" equals to YYYY
+        let date2 = getDateFromTime(timeString: "23:59:59")
+        let rowData2 = berlinClock.getSingleMinuteIndecatorRow(date: date2)
+        XCTAssertEqual(rowData2, "YYYY")
+        
+        // Case 3: Test if "12:32:00" equals to YYOO
+        let date3 = getDateFromTime(timeString: "12:32:00")
+        let rowData3 = berlinClock.getSingleMinuteIndecatorRow(date: date3)
+        XCTAssertEqual(rowData3, "YYOO")
+        
+        // Case 4: Test if "12:34:00" equals to YYYY
+        let date4 = getDateFromTime(timeString: "12:34:00")
+        let rowData4 = berlinClock.getSingleMinuteIndecatorRow(date: date4)
+        XCTAssertEqual(rowData4, "YYYY")
+        
+        // Case 5: Test if "12:35:00" equals to OOOO
+        let date5 = getDateFromTime(timeString: "12:35:00")
+        let rowData5 = berlinClock.getSingleMinuteIndecatorRow(date: date5)
+        XCTAssertEqual(rowData5, "OOOO")
+    }
     
 }
