@@ -88,5 +88,33 @@ class BerlinClockTests: XCTestCase {
         XCTAssertEqual(rowData5, "RRRR")
     }
     
+    func testFiveMinutesRow() {
+        // Case 1: Test if "00:00:00" equals to OOOOOOOOOOO
+        let date1 = getDateFromTime(timeString: "00:00:00")
+        let rowData1 = berlinClock.getFiveMinuteIndecatorRow(date: date1)
+        XCTAssertEqual(rowData1, "OOOOOOOOOOO")
+        
+        // Case 2: Test if "23:59:59" equals to YYRYYRYYRYY
+        let date2 = getDateFromTime(timeString: "23:59:59")
+        let rowData2 = berlinClock.getFiveMinuteIndecatorRow(date: date2)
+        XCTAssertEqual(rowData2, "YYRYYRYYRYY")
+        
+        // Case 3: Test if "12:04:00" equals to OOOOOOOOOOO
+        let date3 = getDateFromTime(timeString: "12:04:00")
+        let rowData3 = berlinClock.getFiveMinuteIndecatorRow(date: date3)
+        XCTAssertEqual(rowData3, "OOOOOOOOOOO")
+        
+        // Case 4: Test if "12:23:00" equals to RRRO
+        let date4 = getDateFromTime(timeString: "12:23:00")
+        let rowData4 = berlinClock.getFiveMinuteIndecatorRow(date: date4)
+        XCTAssertEqual(rowData4, "YYRYOOOOOOO")
+        
+        // Case 5: Test if "12:35:00" equals to YYRYYRYOOOO
+        let date5 = getDateFromTime(timeString: "12:35:00")
+        let rowData5 = berlinClock.getFiveMinuteIndecatorRow(date: date5)
+        XCTAssertEqual(rowData5, "YYRYYRYOOOO")
+    }
+    
+    
     
 }

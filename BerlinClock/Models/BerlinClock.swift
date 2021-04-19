@@ -46,7 +46,26 @@ class BerlinClock: Clock {
         return indecatorRow
     }
     
-  
+    /// Gets String representation from five minute indecator row.
+    func getFiveMinuteIndecatorRow(date: Date) -> String {
+        let minutes = Int(getCurrentMinute(date: date)) ?? 0
+        let numberOfActiveLamps = minutes / 5
+        var indecatorRow: String = ""
+        for i in 1...11 {
+            if (i <= numberOfActiveLamps) {
+                if (i % 3 == 0) {
+                    indecatorRow.append(BerlinClockLamp.R.rawValue)
+                } else {
+                    indecatorRow.append(BerlinClockLamp.Y.rawValue)
+                }
+            } else {
+                indecatorRow.append(BerlinClockLamp.O.rawValue)
+            }
+            
+        }
+        return indecatorRow
+    }
+    
     
     @objc private func updateClock() {
         date = Date.init()
