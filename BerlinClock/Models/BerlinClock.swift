@@ -24,7 +24,13 @@ class BerlinClock: Clock {
     }
     
     func getFiveHoursIndecatorRow(date: Date) -> String {
-        return ""
+        let hours = Int(getCurrentHour(date: date)) ?? 0
+        let numberOfActiveLamps = hours / 5
+        var indecatorRow: String = ""
+        for i in 1...4 {
+            indecatorRow.append(i <= numberOfActiveLamps ? BerlinClockLamp.R.rawValue : BerlinClockLamp.O.rawValue)
+        }
+        return indecatorRow
     }
     
     
