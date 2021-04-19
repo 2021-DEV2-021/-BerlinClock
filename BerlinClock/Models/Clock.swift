@@ -1,10 +1,6 @@
 import Foundation
 
-class Clock {
-    private var date: Date
-    private var timer: Timer?
-    
-    init() {
-        date = Date.init()
-    }
+protocol Clock {
+    var date: Date {get }
+    var timer: Timer? {get set}
 }
