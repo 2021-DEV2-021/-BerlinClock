@@ -6,19 +6,58 @@ enum BerlinClockLamp: String {
     case O
 }
 
+protocol BerlinClockDelegate: class {
+    func dataUpdated()
+}
+
 class BerlinClock: Clock {
     
     var date: Date
     
     var timer: Timer?
     
+    let numberOfLampRows = 5
+    
     var berlinTime: String {
         get {return getBerlinTime(date: date)}
     }
     
+    weak var delegate: BerlinClockDelegate?
+    
     init() {
         date = Date.init()
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateClock), userInfo: nil, repeats: true)
+    }
+    
+    /// Get number of lamps for lamp row.
+    func getNumberOfItemsForLampRow(row: Int) -> Int {
+        return getLampStringForRow(row: row).count
+    }
+    
+    /// Get value of lamp by row number and position in row.
+    func getLampStatusForLamp(row: Int, numberInRow: Int) -> BerlinClockLamp {
+        let timeString = getLampStringForRow(row: row)
+        let stringValue = String(timeString[timeString.index(timeString.startIndex, offsetBy: numberInRow)])
+        let valueAsEnum = BerlinClockLamp.init(rawValue: stringValue)
+        return valueAsEnum ?? .O
+    }
+    
+    /// Get value for lamp row based on row number.
+    private func getLampStringForRow(row: Int) -> String {
+        switch row {
+        case 0:
+            return getSecondIndecatorRow(date: date)
+        case 1:
+            return getFiveHourIndecatorRow(date: date)
+        case 2:
+            return getSingleHourIndecatorRow(date: date)
+        case 3:
+            return getFiveMinuteIndecatorRow(date: date)
+        case 4:
+            return getSingleMinuteIndecatorRow(date: date)
+        default:
+            return ""
+        }
     }
     
     /// Gets String representation from second indecator.
@@ -90,5 +129,6 @@ class BerlinClock: Clock {
     
     @objc private func updateClock() {
         date = Date.init()
+        delegate?.dataUpdated()
     }
 }

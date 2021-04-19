@@ -1,10 +1,22 @@
 import Foundation
 
+protocol DigitalClockDelegate: class {
+    func dataUpdated()
+}
+
 class DigitalClock: Clock {
     
     var date: Date
     
     var timer: Timer?
+    
+    weak var delegate: DigitalClockDelegate?
+    
+    var digitalTime: String {
+        get {
+            return getDigitalTime(date: date)
+        }
+    }
     
     init() {
         date = Date.init()
@@ -17,5 +29,6 @@ class DigitalClock: Clock {
     
     @objc private func updateClock() {
         date = Date.init()
+        delegate?.dataUpdated()
     }
 }

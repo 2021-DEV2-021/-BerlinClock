@@ -22,6 +22,12 @@ class ClockViewController: UIViewController {
             }
             berlinClockChildVC.berlinClock = berlinClock
         }
+        if (segue.identifier == SegueKeys.digitalClockSegue.rawValue) {
+            guard let berlinClockChildVC = segue.destination as? DigitalClockViewController else {
+                return
+            }
+            berlinClockChildVC.digitalClock = digitalClock
+        }
     }
 }
 
