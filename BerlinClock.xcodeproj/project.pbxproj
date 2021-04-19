@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		33ADA57C262D6CEE00529A72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ADA57B262D6CEE00529A72 /* AppDelegate.swift */; };
 		33ADA57E262D6CEE00529A72 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ADA57D262D6CEE00529A72 /* SceneDelegate.swift */; };
-		33ADA580262D6CEE00529A72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ADA57F262D6CEE00529A72 /* ViewController.swift */; };
+		33ADA580262D6CEE00529A72 /* ClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ADA57F262D6CEE00529A72 /* ClockViewController.swift */; };
 		33ADA583262D6CEE00529A72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33ADA581262D6CEE00529A72 /* Main.storyboard */; };
 		33ADA585262D6CF000529A72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33ADA584262D6CF000529A72 /* Assets.xcassets */; };
 		33ADA588262D6CF000529A72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33ADA586262D6CF000529A72 /* LaunchScreen.storyboard */; };
@@ -35,7 +35,7 @@
 		33ADA578262D6CEE00529A72 /* BerlinClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BerlinClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33ADA57B262D6CEE00529A72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33ADA57D262D6CEE00529A72 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		33ADA57F262D6CEE00529A72 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		33ADA57F262D6CEE00529A72 /* ClockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockViewController.swift; sourceTree = "<group>"; };
 		33ADA582262D6CEE00529A72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		33ADA584262D6CF000529A72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		33ADA587262D6CF000529A72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -93,7 +93,6 @@
 				33ADA5B3262D786500529A72 /* Models */,
 				33ADA57B262D6CEE00529A72 /* AppDelegate.swift */,
 				33ADA57D262D6CEE00529A72 /* SceneDelegate.swift */,
-				33ADA57F262D6CEE00529A72 /* ViewController.swift */,
 				33ADA581262D6CEE00529A72 /* Main.storyboard */,
 				33ADA584262D6CF000529A72 /* Assets.xcassets */,
 				33ADA586262D6CF000529A72 /* LaunchScreen.storyboard */,
@@ -126,6 +125,7 @@
 		33ADA5B4262D786D00529A72 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				33ADA57F262D6CEE00529A72 /* ClockViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -230,7 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33ADA580262D6CEE00529A72 /* ViewController.swift in Sources */,
+				33ADA580262D6CEE00529A72 /* ClockViewController.swift in Sources */,
 				33ADA5C2262D9C9100529A72 /* DigitalClock.swift in Sources */,
 				33ADA5BA262D795E00529A72 /* BerlinClock.swift in Sources */,
 				33ADA57C262D6CEE00529A72 /* AppDelegate.swift in Sources */,
