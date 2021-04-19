@@ -23,6 +23,10 @@ class BerlinClock: Clock {
         return lampstatus.rawValue
     }
     
+    func getFiveHoursIndecatorRow(date: Date) -> String {
+        return ""
+    }
+    
     
     @objc private func updateClock() {
         date = Date.init()
