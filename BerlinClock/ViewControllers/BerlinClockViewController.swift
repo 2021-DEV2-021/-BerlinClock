@@ -3,7 +3,7 @@ import UIKit
 class BerlinClockViewController: UIViewController {
     
     var berlinClock: BerlinClock?
-
+    
     @IBOutlet weak var gridCollectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -13,6 +13,7 @@ class BerlinClockViewController: UIViewController {
         gridCollectionView.dataSource = self
     }
     
+    // Get the shape of the lamp based on the row.
     func getBerlinClockLampShapeForCellSection(section: Int) -> BerlinLampShape {
         switch section {
         case 0:
@@ -53,6 +54,23 @@ extension BerlinClockViewController: UICollectionViewDataSource {
         } else {
             return UICollectionViewCell()
         }
+    }
+}
+
+extension BerlinClockViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let heightCollectionView = collectionView.superview?.layer.bounds.height ?? 400
+        let widthCollectionView =  Double(UIScreen.main.bounds.width - 40)
+        let numberOfSectionsInGrid = gridCollectionView.numberOfSections
+        let numberOfCellsInSectionForCell = gridCollectionView.numberOfItems(inSection: indexPath.section)
+        let heightCell: Double = Double((Int(heightCollectionView) - (numberOfSectionsInGrid * 10)) / numberOfSectionsInGrid)
+        var widthCell: Double = 0
+        if (numberOfCellsInSectionForCell == 1) {
+           widthCell = heightCell
+        } else {
+            widthCell = (widthCollectionView - Double((numberOfCellsInSectionForCell * 10))) / Double(numberOfCellsInSectionForCell)
+        }
+        return CGSize(width: widthCell, height: heightCell)
     }
 }
 
