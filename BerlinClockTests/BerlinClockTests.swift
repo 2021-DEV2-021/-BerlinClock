@@ -33,7 +33,7 @@ class BerlinClockTests: XCTestCase {
     }
     
     
-    func testFiverHoursRow() {
+    func testFiveHoursRow() {
         // Case 1: Test if "00:00:00" equals to OOOO
         let date1 = getDateFromTime(timeString: "00:00:00")
         let rowData1 = berlinClock.getFiveHoursIndecatorRow(date: date1)
@@ -58,6 +58,34 @@ class BerlinClockTests: XCTestCase {
         let date5 = getDateFromTime(timeString: "16:35:00")
         let rowData5 = berlinClock.getFiveHoursIndecatorRow(date: date5)
         XCTAssertEqual(rowData5, "RRRO")
+    }
+    
+    
+    func testOneHoursRow() {
+        // Case 1: Test if "00:00:00" equals to OOOO
+        let date1 = getDateFromTime(timeString: "00:00:00")
+        let rowData1 = berlinClock.getOneHourIndecatorRow(date: date1)
+        XCTAssertEqual(rowData1, "OOOO")
+        
+        // Case 2: Test if "23:59:59" equals to RRRO
+        let date2 = getDateFromTime(timeString: "23:59:59")
+        let rowData2 = berlinClock.getOneHourIndecatorRow(date: date2)
+        XCTAssertEqual(rowData2, "RRRO")
+        
+        // Case 3: Test if "02:04:00" equals to RROO
+        let date3 = getDateFromTime(timeString: "02:04:00")
+        let rowData3 = berlinClock.getOneHourIndecatorRow(date: date3)
+        XCTAssertEqual(rowData3, "RROO")
+        
+        // Case 4: Test if "08:23:00" equals to RRRO
+        let date4 = getDateFromTime(timeString: "08:23:00")
+        let rowData4 = berlinClock.getOneHourIndecatorRow(date: date4)
+        XCTAssertEqual(rowData4, "RRRO")
+        
+        // Case 5: Test if "16:35:00" equals to RRRR
+        let date5 = getDateFromTime(timeString: "14:35:00")
+        let rowData5 = berlinClock.getOneHourIndecatorRow(date: date5)
+        XCTAssertEqual(rowData5, "RRRR")
     }
     
     
