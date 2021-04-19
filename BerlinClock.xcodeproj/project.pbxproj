@@ -19,6 +19,7 @@
 		33ADA5BE262D848E00529A72 /* ClockTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ADA5BD262D848E00529A72 /* ClockTest.swift */; };
 		33ADA5C2262D9C9100529A72 /* DigitalClock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ADA5C1262D9C9100529A72 /* DigitalClock.swift */; };
 		33ADA5C6262D9D8200529A72 /* DigitalClockTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ADA5C5262D9D8200529A72 /* DigitalClockTest.swift */; };
+		33ADA5D0262DA2D700529A72 /* BerlinClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ADA5CF262DA2D700529A72 /* BerlinClockViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		33ADA5BD262D848E00529A72 /* ClockTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockTest.swift; sourceTree = "<group>"; };
 		33ADA5C1262D9C9100529A72 /* DigitalClock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitalClock.swift; sourceTree = "<group>"; };
 		33ADA5C5262D9D8200529A72 /* DigitalClockTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitalClockTest.swift; sourceTree = "<group>"; };
+		33ADA5CF262DA2D700529A72 /* BerlinClockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlinClockViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				33ADA57F262D6CEE00529A72 /* ClockViewController.swift */,
+				33ADA5CF262DA2D700529A72 /* BerlinClockViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				33ADA580262D6CEE00529A72 /* ClockViewController.swift in Sources */,
 				33ADA5C2262D9C9100529A72 /* DigitalClock.swift in Sources */,
 				33ADA5BA262D795E00529A72 /* BerlinClock.swift in Sources */,
+				33ADA5D0262DA2D700529A72 /* BerlinClockViewController.swift in Sources */,
 				33ADA57C262D6CEE00529A72 /* AppDelegate.swift in Sources */,
 				33ADA5B6262D789500529A72 /* Clock.swift in Sources */,
 				33ADA57E262D6CEE00529A72 /* SceneDelegate.swift in Sources */,

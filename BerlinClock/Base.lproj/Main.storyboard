@@ -17,23 +17,48 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Berlin Clock" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzz-8L-IBN">
-                                <rect key="frame" x="20" y="99" width="168" height="36"/>
+                                <rect key="frame" x="20" y="80" width="374" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dFu-zD-BUL">
+                                <rect key="frame" x="0.0" y="152" width="414" height="400"/>
+                                <connections>
+                                    <segue destination="3TB-84-OXf" kind="embed" identifier="berlinClockSegue" id="Szy-5U-po8"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="dFu-zD-BUL" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.446429" id="BRw-4q-Eqe"/>
+                            <constraint firstItem="dFu-zD-BUL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Xgq-De-zTJ"/>
+                            <constraint firstItem="dFu-zD-BUL" firstAttribute="top" secondItem="nzz-8L-IBN" secondAttribute="bottom" constant="36" id="hAb-T3-wP6"/>
                             <constraint firstItem="nzz-8L-IBN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="hBT-pp-kdI"/>
-                            <constraint firstItem="nzz-8L-IBN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="55" id="k8o-Gk-pSh"/>
+                            <constraint firstItem="nzz-8L-IBN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="36" id="k8o-Gk-pSh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dFu-zD-BUL" secondAttribute="trailing" id="lhZ-Ao-sxf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nzz-8L-IBN" secondAttribute="trailing" constant="20" id="zWG-NO-cpG"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-268" y="138"/>
+        </scene>
+        <!--Berlin Clock View Controller-->
+        <scene sceneID="hDc-NC-lcY">
+            <objects>
+                <viewController id="3TB-84-OXf" customClass="BerlinClockViewController" customModule="BerlinClock" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GnG-1Q-b6A">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cy4-lb-kfF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="488" y="138"/>
         </scene>
     </scenes>
     <resources>
