@@ -1,10 +1,3 @@
-//
-//  BerlinClockTests.swift
-//  BerlinClockTests
-//
-//  Created by Jens Van Steen on 19/04/2021.
-//
-
 import XCTest
 @testable import BerlinClock
 
