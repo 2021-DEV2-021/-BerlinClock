@@ -46,27 +46,27 @@ class BerlinClockTests: XCTestCase {
     func testFiveHoursRow() {
         // Case 1: Test if "00:00:00" equals to OOOO
         let date1 = getDateFromTime(timeString: "00:00:00")
-        let rowData1 = berlinClock.getFiveHoursIndecatorRow(date: date1)
+        let rowData1 = berlinClock.getFiveHourIndecatorRow(date: date1)
         XCTAssertEqual(rowData1, "OOOO")
 
         // Case 2: Test if "23:59:59" equals to RRRR
         let date2 = getDateFromTime(timeString: "23:59:59")
-        let rowData2 = berlinClock.getFiveHoursIndecatorRow(date: date2)
+        let rowData2 = berlinClock.getFiveHourIndecatorRow(date: date2)
         XCTAssertEqual(rowData2, "RRRR")
 
         // Case 3: Test if "02:04:00" equals to OOOO
         let date3 = getDateFromTime(timeString: "02:04:00")
-        let rowData3 = berlinClock.getFiveHoursIndecatorRow(date: date3)
+        let rowData3 = berlinClock.getFiveHourIndecatorRow(date: date3)
         XCTAssertEqual(rowData3, "OOOO")
 
         // Case 4: Test if "08:23:00" equals to ROOO
         let date4 = getDateFromTime(timeString: "08:23:00")
-        let rowData4 = berlinClock.getFiveHoursIndecatorRow(date: date4)
+        let rowData4 = berlinClock.getFiveHourIndecatorRow(date: date4)
         XCTAssertEqual(rowData4, "ROOO")
 
         // Case 5: Test if "16:35:00" equals to RRRO
         let date5 = getDateFromTime(timeString: "16:35:00")
-        let rowData5 = berlinClock.getFiveHoursIndecatorRow(date: date5)
+        let rowData5 = berlinClock.getFiveHourIndecatorRow(date: date5)
         XCTAssertEqual(rowData5, "RRRO")
     }
     
@@ -150,6 +150,28 @@ class BerlinClockTests: XCTestCase {
         let date5 = getDateFromTime(timeString: "12:35:00")
         let rowData5 = berlinClock.getSingleMinuteIndecatorRow(date: date5)
         XCTAssertEqual(rowData5, "OOOO")
+    }
+    
+    func testBerlinClock() {
+        // Case 1: Test if "00:00:00" equals to YOOOOOOOOOOOOOOOOOOOOOOO
+        let date1 = getDateFromTime(timeString: "00:00:00")
+        let rowData1 = berlinClock.getBerlinTime(date: date1)
+        XCTAssertEqual(rowData1, "YOOOOOOOOOOOOOOOOOOOOOOO")
+        
+        // Case 2: Test if "23:59:59" equals to ORRRRRRROYYRYYRYYRYYYYYY
+        let date2 = getDateFromTime(timeString: "23:59:59")
+        let rowData2 = berlinClock.getBerlinTime(date: date2)
+        XCTAssertEqual(rowData2, "ORRRRRRROYYRYYRYYRYYYYYY")
+        
+        // Case 3: Test if "16:50:06" equals to YRRROROOOYYRYYRYYRYOOOOO
+        let date3 = getDateFromTime(timeString: "16:50:06")
+        let rowData3 = berlinClock.getBerlinTime(date: date3)
+        XCTAssertEqual(rowData3, "YRRROROOOYYRYYRYYRYOOOOO")
+                
+        // Case 4: Test if "11:37:01" equals to ORROOROOOYYRYYRYOOOOYYOO
+        let date4 = getDateFromTime(timeString: "11:37:01")
+        let rowData4 = berlinClock.getBerlinTime(date: date4)
+        XCTAssertEqual(rowData4, "ORROOROOOYYRYYRYOOOOYYOO")
     }
     
 }

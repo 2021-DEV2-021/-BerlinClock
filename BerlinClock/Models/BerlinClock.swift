@@ -12,6 +12,10 @@ class BerlinClock: Clock {
     
     var timer: Timer?
     
+    var berlinTime: String {
+        get {return getBerlinTime(date: date)}
+    }
+    
     init() {
         date = Date.init()
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateClock), userInfo: nil, repeats: true)
@@ -25,7 +29,7 @@ class BerlinClock: Clock {
     }
     
     /// Gets String representation from five hours indecator row.
-    func getFiveHoursIndecatorRow(date: Date) -> String {
+    func getFiveHourIndecatorRow(date: Date) -> String {
         let hours = Int(getCurrentHour(date: date)) ?? 0
         let numberOfActiveLamps = hours / 5
         var indecatorRow: String = ""
@@ -75,6 +79,12 @@ class BerlinClock: Clock {
             indecatorRow.append(i <= numberOfActiveLamps ? BerlinClockLamp.Y.rawValue : BerlinClockLamp.O.rawValue)
         }
         return indecatorRow
+    }
+    
+    
+    /// Gets String representation Berlin Clock.
+    func getBerlinTime(date: Date) -> String {
+        return "\(getSecondIndecatorRow(date: date))\(getFiveHourIndecatorRow(date: date))\(getSingleHourIndecatorRow(date: date))\(getFiveMinuteIndecatorRow(date: date))\(getSingleMinuteIndecatorRow(date: date))"
     }
     
     
