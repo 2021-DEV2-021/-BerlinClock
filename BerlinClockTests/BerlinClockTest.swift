@@ -1,7 +1,7 @@
 import XCTest
 @testable import BerlinClock
 
-class BerlinClockTests: XCTestCase {
+class BerlinClockTest: XCTestCase {
     
     var berlinClock: BerlinClock!
     

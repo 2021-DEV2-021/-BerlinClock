@@ -13,10 +13,12 @@
 		33ADA583262D6CEE00529A72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33ADA581262D6CEE00529A72 /* Main.storyboard */; };
 		33ADA585262D6CF000529A72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33ADA584262D6CF000529A72 /* Assets.xcassets */; };
 		33ADA588262D6CF000529A72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33ADA586262D6CF000529A72 /* LaunchScreen.storyboard */; };
-		33ADA593262D6CF000529A72 /* BerlinClockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ADA592262D6CF000529A72 /* BerlinClockTests.swift */; };
+		33ADA593262D6CF000529A72 /* BerlinClockTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ADA592262D6CF000529A72 /* BerlinClockTest.swift */; };
 		33ADA5B6262D789500529A72 /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ADA5B5262D789500529A72 /* Clock.swift */; };
 		33ADA5BA262D795E00529A72 /* BerlinClock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ADA5B9262D795E00529A72 /* BerlinClock.swift */; };
 		33ADA5BE262D848E00529A72 /* ClockTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ADA5BD262D848E00529A72 /* ClockTest.swift */; };
+		33ADA5C2262D9C9100529A72 /* DigitalClock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ADA5C1262D9C9100529A72 /* DigitalClock.swift */; };
+		33ADA5C6262D9D8200529A72 /* DigitalClockTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ADA5C5262D9D8200529A72 /* DigitalClockTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,11 +41,13 @@
 		33ADA587262D6CF000529A72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		33ADA589262D6CF000529A72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33ADA58E262D6CF000529A72 /* BerlinClockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BerlinClockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		33ADA592262D6CF000529A72 /* BerlinClockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlinClockTests.swift; sourceTree = "<group>"; };
+		33ADA592262D6CF000529A72 /* BerlinClockTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlinClockTest.swift; sourceTree = "<group>"; };
 		33ADA594262D6CF000529A72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33ADA5B5262D789500529A72 /* Clock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
 		33ADA5B9262D795E00529A72 /* BerlinClock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlinClock.swift; sourceTree = "<group>"; };
 		33ADA5BD262D848E00529A72 /* ClockTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockTest.swift; sourceTree = "<group>"; };
+		33ADA5C1262D9C9100529A72 /* DigitalClock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitalClock.swift; sourceTree = "<group>"; };
+		33ADA5C5262D9D8200529A72 /* DigitalClockTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitalClockTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,9 +105,10 @@
 		33ADA591262D6CF000529A72 /* BerlinClockTests */ = {
 			isa = PBXGroup;
 			children = (
-				33ADA592262D6CF000529A72 /* BerlinClockTests.swift */,
+				33ADA592262D6CF000529A72 /* BerlinClockTest.swift */,
 				33ADA594262D6CF000529A72 /* Info.plist */,
 				33ADA5BD262D848E00529A72 /* ClockTest.swift */,
+				33ADA5C5262D9D8200529A72 /* DigitalClockTest.swift */,
 			);
 			path = BerlinClockTests;
 			sourceTree = "<group>";
@@ -113,6 +118,7 @@
 			children = (
 				33ADA5B5262D789500529A72 /* Clock.swift */,
 				33ADA5B9262D795E00529A72 /* BerlinClock.swift */,
+				33ADA5C1262D9C9100529A72 /* DigitalClock.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -225,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				33ADA580262D6CEE00529A72 /* ViewController.swift in Sources */,
+				33ADA5C2262D9C9100529A72 /* DigitalClock.swift in Sources */,
 				33ADA5BA262D795E00529A72 /* BerlinClock.swift in Sources */,
 				33ADA57C262D6CEE00529A72 /* AppDelegate.swift in Sources */,
 				33ADA5B6262D789500529A72 /* Clock.swift in Sources */,
@@ -236,8 +243,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33ADA5C6262D9D8200529A72 /* DigitalClockTest.swift in Sources */,
 				33ADA5BE262D848E00529A72 /* ClockTest.swift in Sources */,
-				33ADA593262D6CF000529A72 /* BerlinClockTests.swift in Sources */,
+				33ADA593262D6CF000529A72 /* BerlinClockTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
