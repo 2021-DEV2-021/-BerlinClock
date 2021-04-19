@@ -114,7 +114,7 @@ class BerlinClockTest: XCTestCase {
         let rowData3 = berlinClock.getFiveMinuteIndecatorRow(date: date3)
         XCTAssertEqual(rowData3, "OOOOOOOOOOO")
         
-        // Case 4: Test if "12:23:00" equals to RRRO
+        // Case 4: Test if "12:23:00" equals to YYRYOOOOOOO
         let date4 = getDateFromTime(timeString: "12:23:00")
         let rowData4 = berlinClock.getFiveMinuteIndecatorRow(date: date4)
         XCTAssertEqual(rowData4, "YYRYOOOOOOO")
